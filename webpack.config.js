@@ -20,7 +20,7 @@ Encore
     .addEntry('js/jquery.stellar.min', './assets/js/jquery.stellar.min')
     .addEntry('js/jquery.style.switcher', './assets/js/jquery.style.switcher.js')
     .addEntry('js/jquery.waypoints.min', './assets/js/jquery.waypoints.min.js')
-    .addEntry('js/magnific-popup-options', './assets/js/magnific-popup-options.js')
+    .addEntry('js/magnific-popup-options', './assets/js/jquery-magnific-popup-options.js')
     .addEntry('js/modernizr-2.6.2.min', './assets/js/modernizr-2.6.2.min.js')
     .addEntry('js/respond.min', './assets/js/respond.min.js')
 
