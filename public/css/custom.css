@@ -1,3 +1,18 @@
 .work-text {
     color: #333333 !important;
 }
+.required {
+    font-weight: normal !important;
+}
+label {
+    display: none;
+}
+.name {
+    font-weight: 500;
+    padding: 2px 6px;
+    background-color: #FFFFFF;
+    color: #c24d67;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}

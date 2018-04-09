@@ -2435,4 +2435,7 @@
 .icon-ellipsis:before {
 	content: "\e129";
 }
+.icon-lab:before {
+  content: "\e9aa";
+}
 

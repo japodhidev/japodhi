@@ -11,16 +11,16 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Request;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use App\Form\ContactType;
 
 class ContactController extends Controller {
 
     /**
-     * @Route("/contact", name="reach-out")
+     * @Route("/contact/success", name="reach-out")
      */
-    public function contactAction(){
-        return $this->render('contact/contact.html.twig', array(
-            'title' => 'japodhi | Contact Me'
-        ));
+    public function contactAction() {
+        return $this->render('contact/contact.html.twig', array('title'=>'Japodhi | Contact'));
     }
 }

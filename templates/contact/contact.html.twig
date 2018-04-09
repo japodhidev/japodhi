@@ -1,1 +1,75 @@
-{% extends '::base.html.twig' %}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% block header %}
+
+        <header id="fh5co-header" class="navbar-fixed-top">
+            <div class="container">
+                <!-- <div class="row"> -->
+                <nav class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <!-- Mobile Toggle Menu Button -->
+                        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                        <a class="navbar-brand" href="{{ path('homepage') }}">japodhi</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class=""><a href="{{ path('homepage') }}" data-nav-section="home"><span>Home</span></a></li>
+                            <li class="active"><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- </div> -->
+            </div>
+        </header>
+    {% endblock %}
+
+
+        {% block contact %}
+        <section id="fh5co-contact" data-section="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 section-heading text-center">
+                        <h2 class="to-animate">Get In Touch</h2>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 subtext to-animate">
+                                <h3>Reach out and chat, request a quotation, say hi. Below are various ways you can talk to the good folks over at japodhi</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-bottom-padded-md">
+                    <div class="col-md-6 to-animate">
+                        <h3>Contact Info</h3>
+                        <ul class="fh5co-contact-info">
+                            <li class="fh5co-contact-address ">
+                                <i class="icon-home"></i>Nairobi, Kenya
+                            </li>
+                            <li><i class="icon-phone"></i> (254) 742-199735</li>
+                            <li><i class="icon-envelope"></i>japodhidev@gmail.com</li>
+                            <li><i class="icon-globe"></i>
+                                <a href="https://japodhidev.github.io" target="_blank">japodhi's blog</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 to-animate">
+                        <h3>Your email was successfully sent.</h3>
+                        {% if success_msg is defined %}
+                            <div class="alert alert-dismissible alert-success" role="alert">
+                                Thank you for reaching out
+                                <span class="name">{{ success_msg.name | capitalize }}</span>. Your feedback is highly appreciated
+                                <br>
+                                Return to the <a href="{{ path('homepage') }}" class="alert-link">homepage</a>.
+                            </div>
+                        {% endif %}
+
+                    </div>
+                </div>
+
+            </div>
+            <div id="map" class="to-animate"></div>
+        </section>
+    {% endblock %}
+{% endblock %}

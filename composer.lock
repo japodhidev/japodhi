@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1365471437326b3dbd36916c843ba0e",
+    "content-hash": "5d41bfe36f5ad8810e69e26af9c24a26",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -4001,7 +4001,7 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v4.0.7",
+            "version": "v4.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
