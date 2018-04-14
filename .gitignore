@@ -1,5 +1,6 @@
 
 ###> symfony/framework-bundle ###
+composer.lock
 .env.dist
 /public/bundles/
 /var/
