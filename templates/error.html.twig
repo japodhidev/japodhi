@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="web developer, website design, website design kenya, web development kenya" />
+    <meta name="author" content="" />
+
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+
+    <title>{{ status_code }} | Error</title>
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('/css/animate.css') }}">
+
+        <link rel="stylesheet" href="{{ asset('/css/icomoon.css') }}">
+
+        <link rel="stylesheet" href="{{ asset('css/simple-line-icons.css') }}">
+
+        <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+
+        <link rel="stylesheet" href="{{ asset('css/pink.css') }}">
+
+        <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+        <!-- FOR IE9 below -->
+        <!--[if lt IE 9]>
+        <script src="{{ asset('js/respond.min.js') }}"></script>
+        <![endif]-->
+
+    {% endblock %}
+</head>
+<body>
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 section-heading text-center">
+            <h2 class="to-animate">{{ status_code }}</h2>
+            <div class="row row-bottom-padded-md">
+                <div class="col-md-8 col-md-offset-2 subtext to-animate">
+                    <h3>{{ status_text }}</h3>
+                    <h3>Huh. That's strange. Management is having a rather bad day. <br>
+                        Return to the <a href="{{ path('homepage') }}">homepage.</a></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+{% block javascripts %}
+
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+
+    <script src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+    <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
+
+    <script src="{{ asset('js/jquery.stellar.min.js') }}"></script>
+
+    <script src="{{ asset('js/jquery.countTo.js') }}"></script>
+
+    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+
+    <script src="{{ asset('js/magnific-popup-options.js') }}"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+    <script src="{{ asset('js/google_map.js') }}"></script>
+
+
+    <script src="{{ asset('js/main.js') }}"></script>
+{% endblock %}
+</body>
+</html>

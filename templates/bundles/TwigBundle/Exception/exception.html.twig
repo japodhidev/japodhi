@@ -1,0 +1,6 @@
+{% extends 'error.html.twig' %}
+{% block body %}
+    <p {{ exception.message|length > 180 ? 'long' }}">
+    {{- exception.message|nl2br|format_file_from_text -}}
+    </p>
+{% endblock %}

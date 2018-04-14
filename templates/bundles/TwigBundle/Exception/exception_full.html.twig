@@ -1,0 +1,21 @@
+{% block title %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 section-heading text-center">
+                <h2 class="to-animate">HTTP {{ status_code }} {{ status_text }} </h2>
+                <div class="row row-bottom-padded-md">
+                    <div class="col-md-8 col-md-offset-2 subtext to-animate">
+                        {% block body %}
+                            {% include 'bundles/TwigBundle/Exception/exception.html.twig' %}
+                        {% endblock %}
+                        <h3>HR couldn't get your request through to the boss man.<br>
+                            Return to the <a href="{{ path('homepage') }}">homepage.</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
