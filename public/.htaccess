@@ -1,0 +1,4 @@
+SetEnv APP_ENV "prod"
+SetEnv APP_SECRET "ThisIsSupposedToBeASecret"
+SetEnv APP_DEBUG 1
+SetEnv MAILER_URL "gmail://axelbryant04@gmail.com:Wazzuupguyz@localhost"
