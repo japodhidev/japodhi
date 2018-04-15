@@ -4,6 +4,7 @@ composer.lock
 /public/bundles/
 /var/
 /vendor/
+/logs/
 ###< symfony/framework-bundle ###
 
 ###> symfony/webpack-encore-pack ###
