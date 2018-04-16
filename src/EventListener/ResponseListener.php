@@ -8,13 +8,24 @@
 
 namespace App\EventListener;
 
+use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 
 class ResponseListener
 {
+
+
     public function onKernelResponse(FilterResponseEvent $event) {
-        $event->getResponse()->headers->set('x-frame-options', 'deny');
-        $event->getResponse()->headers->set('x-xss-protection', '1; mode=block');
-        $event->getResponse()->headers->set('x-content-type-options', 'nosniff');
+
+
+        $response = $event->getResponse();
+        $response->headers->set('X-XSS-Protection', '1; mode=block');
+        $response->headers->set('X-Frame-Options', 'deny');
+        $response->headers->set('X-Content-Type-Options', 'nosniff');
+        $response->headers->set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+
+
+        $response->prepare($event->getRequest());
+
     }
 }
