@@ -11,7 +11,7 @@ function init() {
     
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 8,
+        zoom: 9,
 
         // The latitude and longitude to center the map (always required)
         center: myLatlng,
@@ -19,7 +19,7 @@ function init() {
         // How you would like to style the map. 
         scrollwheel: false
     };
-
+    
     
 
     // Get the HTML DOM element that will contain your map 
@@ -31,15 +31,22 @@ function init() {
     
     var addresses = ['Nairobi'];
 
+    var marker = new google.maps.Marker({
+    	position: myLatlng,
+    	map: map
+    });
+
+
     for (var x = 0; x < addresses.length; x++) {
         $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x], null, function (data) {
             var p = data.results[0].geometry.location
             var latlng = new google.maps.LatLng(p.lat, p.lng);
-            new google.maps.Marker({
+            /*new google.maps.Marker({
                 position: latlng,
-                map: map,
-                icon: 'images/loc.png'
-            });
+                map: map
+                //icon: 'images/loc.png'
+            });*/
+            var placeMarker = marker;
 
         });
     }
