@@ -16,3 +16,10 @@ label {
     -moz-border-radius: 6px;
     border-radius: 6px;
 }
+.custom-bg {
+    background-color: #c24d67 !important;
+    color: #FFFFFF !important;
+}
+.custom-bg  h3 {
+    color: #FFFFFF !important;
+}

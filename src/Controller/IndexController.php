@@ -40,7 +40,12 @@ class IndexController extends Controller {
             $msg = (new \Swift_Message('Email from japodhi.com'))
                 ->setFrom($email)
                 ->setTo($email_to)
-                ->setBody($message);
+//                ->setBody($message);
+                ->setBody(
+                    $this->renderView('emails/email.html.twig', array(
+                        'title' => 'You got mail.', 'name' => $name, 'msg' => $message, 'email' => $email)
+                    ), 'text/html'
+                );
 
             $mailer->send($msg);
 
@@ -58,6 +63,14 @@ class IndexController extends Controller {
             ));
         }
 
+    }
+    /**
+     * @Route("/test", name="test")
+     */
+    public function testAction(){
+        return $this->render('mail.html.twig', array (
+            'title' => 'Mail view test'
+        ));
     }
 
 
